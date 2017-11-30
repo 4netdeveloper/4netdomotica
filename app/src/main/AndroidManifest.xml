@@ -30,7 +30,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".Main3Activity"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="portrait" />
         <activity android:name=".atencion" />
         <activity android:name=".Main4Activity"></activity>
     </application>
