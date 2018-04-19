@@ -18,8 +18,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class linkeador extends Activity {
-    private static String org = "http://192.168.42.1:8080/";
+public class linkeador extends Activity { //clase para conectar apk con la raspy
+    private static String org = "http://192.168.42.1:8080/"; //ip y puerto de conexion
 
     public static String url(String ac) {
 
@@ -40,9 +40,9 @@ public class linkeador extends Activity {
             Log.d("linkeador", "ejecuto: url:" + url);
 
             try {
-                // coneccion con la raspberry
+                // conexion con la raspberry
                 URL urla = new URL(org + url);
-               // esta linea hace el error de conecion al raspberry:::::
+               // esta linea hace el error de conexion al raspberry:::::
                 urlConnection = (HttpURLConnection) urla.openConnection();
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 // InputStream in = new BufferedInputStream(urlConnection.getInputStream());

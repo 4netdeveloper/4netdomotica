@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/4netdomotica.iml" filepath="$PROJECT_DIR$/4netdomotica.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pampamac.iml" filepath="$PROJECT_DIR$/pampamac.iml" />
+      <module fileurl="file://C:\proyectosandroid\4netdomotica\pampamac.iml" filepath="C:\proyectosandroid\4netdomotica\pampamac.iml" />
     </modules>
   </component>
 </project>

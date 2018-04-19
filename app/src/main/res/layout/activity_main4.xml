@@ -508,6 +508,12 @@
                     tools:layout_editor_absoluteX="756dp"
                     tools:layout_editor_absoluteY="139dp" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:orientation="horizontal"></LinearLayout>
+
                 <Button
                     android:id="@+id/button3"
                     android:layout_width="match_parent"
@@ -521,12 +527,6 @@
                     android:textSize="50sp"
                     tools:layout_editor_absoluteX="756dp"
                     tools:layout_editor_absoluteY="236dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.2"
-                    android:orientation="horizontal"></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
