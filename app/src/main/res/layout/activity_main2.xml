@@ -5,51 +5,101 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mac.pampamac.Main2Activity"
-    tools:layout_editor_absoluteY="89dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="73dp">
 
-    <Button
-        android:id="@+id/proyectar"
-        android:layout_width="240dp"
-        android:layout_height="150dp"
-        android:text="PROYECTAR"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="254dp"
+        android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/vertv"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:ignore="HardcodedText"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1" />
-
-    <Button
-        android:id="@+id/vertv"
-        android:layout_width="240dp"
-        android:layout_height="150dp"
-        android:text="VER TELEVISIÓN"
-        android:textAllCaps="false"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/proyectar"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.503"
-        tools:ignore="HardcodedText"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_editor_absoluteY="89dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/vertv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TELEVISIÓN"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:ignore="HardcodedText"
+                    tools:layout_constraintBottom_creator="1"
+                    tools:layout_constraintTop_creator="1"
+                    tools:layout_editor_absoluteX="315dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <Button
+                    android:id="@+id/proyectar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="PROYECTOR"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"
+                    tools:layout_constraintBottom_creator="1"
+                    tools:layout_constraintTop_creator="1"
+                    tools:layout_editor_absoluteX="37dp"
+                    tools:layout_editor_absoluteY="68dp" />
+
+                <Button
+                    android:id="@+id/luces"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="LUCES"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/vertv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.496"
+                    tools:ignore="HardcodedText"
+                    tools:layout_constraintBottom_creator="1"
+                    tools:layout_constraintTop_creator="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/apagar"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
         android:fontFamily="sans-serif"
         android:text="Apagar"
         android:textAllCaps="false"
@@ -57,14 +107,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proyectar"
-        app:layout_constraintVertical_bias="0.44"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteY="391dp" />
 
 
 </android.support.constraint.ConstraintLayout>

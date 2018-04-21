@@ -24,4 +24,33 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
+
+    Button usarproyector;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        usarproyector = (Button) findViewById(R.id.proyectar);
+        usarproyector.setOnClickListener(new View.OnClickListener() {
+            Intent intent = new Intent (Main2Activity.this, Main5Activity.class);
+            startActivity(intent);
+
+        });
+    }
+
+    Button usarluces;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        usarluces = (Button) findViewById(R.id.luces);
+        usarluces.setOnClickListener(new View.OnClickListener() {
+            Intent intent = new Intent (Main2Activity.this, Main6Activity.class);
+            startActivity(intent);
+
+        });
+    }
+
 }
