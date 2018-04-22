@@ -31,6 +31,9 @@ public class Main3Activity extends AppCompatActivity {
     public Button vmax;
     public Button mute;
     public Button pc;
+    public Button btnpr;
+    public Button btnlu;
+    public Button btnmn;
 
 
 
@@ -39,6 +42,7 @@ public class Main3Activity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
         volver = (Button) findViewById(R.id.volver3);
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +54,6 @@ public class Main3Activity extends AppCompatActivity {
         });
 
         btn1  = (Button) findViewById(R.id.button);
-
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -74,9 +77,9 @@ public class Main3Activity extends AppCompatActivity {
         btn2  = (Button) findViewById(R.id.button2);
 
         btn2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
             public void onClick(View v) {
-
-
                 // /*
                 try {
                     linkeador.ira("tv?c=2");
@@ -293,7 +296,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    linkeador.ira("tv?c=uparrow");
+                    linkeador.ira("tv?c=volummenup");
                 } catch (IOException e) {
                     Intent intent = new Intent( Main3Activity.this , atencion.class);
                     startActivity(intent);
@@ -309,7 +312,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    linkeador.ira("tv?c=downarrow");
+                    linkeador.ira("tv?c=volummendown");
                 } catch (IOException e) {
                     Intent intent = new Intent( Main3Activity.this , atencion.class);
                     startActivity(intent);
@@ -345,6 +348,40 @@ public class Main3Activity extends AppCompatActivity {
 
             }
         });
+
+        btnpr = (Button) findViewById(R.id.proyector);
+
+        btnpr.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main3Activity.this, Main5Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnlu= (Button) findViewById(R.id.luces);
+
+        btnlu.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main3Activity.this, Main6Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnmn= (Button) findViewById(R.id.menu);
+
+        btnmn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main3Activity.this, Main2Activity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 

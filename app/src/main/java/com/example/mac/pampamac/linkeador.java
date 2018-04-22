@@ -1,8 +1,5 @@
 package com.example.mac.pampamac;
 
-/**
- * Created by HUESO on 26/8/2017.
- */
 
 import android.app.Activity;
 import android.os.StrictMode;

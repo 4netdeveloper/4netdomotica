@@ -17,15 +17,15 @@ import java.io.IOException;
 public class Main5Activity extends AppCompatActivity {
 
     Button volver;
-    public Button arriba;
+    public Button btnup;
     public Button btndw;
     public Button btnlf;
     public Button btnrg;
     public Button btnok;
     public Button btnme;
     public Button btninp;
-    //public Button btn8;
-    //public Button btn9;
+    public Button btntv;
+    public Button btnlu;
     //public Button btn0;
     //public Button chu;
     //public Button chd;
@@ -61,7 +61,7 @@ public class Main5Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    if ( linkeador.ira( "py?a=u" ) ) {
+                    if ( linkeador.ira( "pr?c=up" ) ) {
                         // todo ok.
 
                     }else{
@@ -153,7 +153,7 @@ public class Main5Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    linkeador.ira("pr?c=on");
+                    linkeador.ira("pr?c=power");
                 } catch (IOException e) {
                     Intent intent = new Intent( Main5Activity.this , atencion.class);
                     startActivity(intent);
@@ -186,152 +186,7 @@ public class Main5Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    linkeador.ira("py?b=in");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-        btn8  = (Button) findViewById(R.id.button9);
-
-        btn8.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=8");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        btn9  = (Button) findViewById(R.id.button10);
-
-        btn9.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=9");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        btn0  = (Button) findViewById(R.id.button11);
-
-        btn0.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=0");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        on = (Button) findViewById(R.id.button12);
-
-        on.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=power");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        chu = (Button) findViewById(R.id.button17);
-
-        chu.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=channelup");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        chd = (Button) findViewById(R.id.button20);
-
-        chd.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=channeldown");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        vmas = (Button) findViewById(R.id.button19);
-
-        vmas.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=uparrow");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        vmenos = (Button) findViewById(R.id.button3);
-
-        vmenos.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=downarrow");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main5Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-
-
-        mute = (Button) findViewById(R.id.button13);
-
-        mute.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=mute");
+                    linkeador.ira("pr?c=s");
                 } catch (IOException e) {
                     Intent intent = new Intent( Main5Activity.this , atencion.class);
                     startActivity(intent);
@@ -349,6 +204,29 @@ public class Main5Activity extends AppCompatActivity {
 
             }
         });
+
+        btntv= (Button) findViewById(R.id.button8);
+        btntv.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main5Activity.this, Main3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnlu= (Button) findViewById(R.id.button23);
+        btnlu.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main5Activity.this, Main6Activity.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
     }
 
 

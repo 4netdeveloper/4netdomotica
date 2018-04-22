@@ -76,7 +76,7 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/button8"
+                                android:id="@+id/televisor"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -91,7 +91,7 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/button23"
+                                android:id="@+id/proyector"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -106,7 +106,7 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/button9"
+                                android:id="@+id/menu"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -247,7 +247,7 @@
                         </LinearLayout>
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/luz1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -307,15 +307,6 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
                                     android:orientation="vertical"></LinearLayout>
-
-                                <Button
-                                    android:id="@+id/button22"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:backgroundTint="@android:color/holo_red_dark"
-                                    android:text="TIMBRE"
-                                    android:textColor="@android:color/background_light" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"

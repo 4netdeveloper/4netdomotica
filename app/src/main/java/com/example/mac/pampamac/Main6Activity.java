@@ -14,65 +14,86 @@ import android.widget.Button;
 import java.io.IOException;
 
 
-    public class Main6Activity extends AppCompatActivity {
+public class Main6Activity extends AppCompatActivity {
 
-        Button volver;
-        public Button arriba;
-        public Button btndw;
-        public Button btnlf;
-        public Button btnrg;
-        public Button btnok;
-        public Button btnme;
-        public Button btninp;
-        //public Button btn8;
-        //public Button btn9;
-        //public Button btn0;
-        //public Button chu;
-        //public Button chd;
-        public Button btnon;
-        //public Button vmas;
-        //public Button vmenos;
-        //public Button vmax;
-        //public Button mute;
-        public Button pc;
+    Button volver;
+    public Button luz1;
+    public Button luz2;
+    public Button luz3;
+    public Button luz4;
+
+    public Button btnpr;
+    public Button btnlu;
+    public Button btnmn;
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main5);
+        volver = (Button) findViewById(R.id.volver3);
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main6Activity.this, Main2Activity.class);
+                startActivity(intent);
 
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main5);
-            volver = (Button) findViewById(R.id.volver3);
-            volver.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(Main5Activity.this, Main2Activity.class);
-                    startActivity(intent);
+            }
+        });
 
+        luz1  = (Button) findViewById(R.id.luz1); //flecha arriba
+
+        luz1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                try {
+                    if ( linkeador.ira( "gp?c=1" ) ) {
+                        // todo ok.
+                    }else{
+                        // falla no conecto.
+                        Intent intent = new Intent( Main6Activity.this , atencion.class);
+                        startActivity(intent);
+                    };
+                } catch (IOException e) {
+                    // fallo otra cosa.
                 }
-            });
+            }
+        });
 
-            btnup  = (Button) findViewById(R.id.button); //flecha arriba
+        btnpr = (Button) findViewById(R.id.proyector);
+        btnpr.setOnClickListener(new View.OnClickListener(){
 
-            btnup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main6Activity.this, Main5Activity.class);
+                startActivity(intent);
+            }
+        });
 
-                @Override
-                public void onClick(View v) {
+        btnlu= (Button) findViewById(R.id.televisor);
+        btnlu.setOnClickListener(new View.OnClickListener(){
 
-                    try {
-                        if ( linkeador.ira( "py?a=u" ) ) {
-                            // todo ok.
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main6Activity.this, Main3Activity.class);
+                startActivity(intent);
+            }
+        });
 
-                        }else{
-                            // falla no conecto.
-                            Intent intent = new Intent( Main5Activity.this , atencion.class);
-                            startActivity(intent);
-                        };
-                    } catch (IOException e) {
-                        // fallo otra cosa.
-                    }
-                }
-            });
-}
+        btnmn= (Button) findViewById(R.id.menu);
+
+        btnmn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main6Activity.this, Main2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
 }
