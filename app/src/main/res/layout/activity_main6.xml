@@ -76,12 +76,12 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/televisor"
+                                android:id="@+id/proyector"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="TV"
-                                android:textSize="12sp" />
+                                android:text="PROYECTOR"
+                                android:textSize="8sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -91,12 +91,12 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/proyector"
+                                android:id="@+id/televisor"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="PROYECTOR"
-                                android:textSize="8sp" />
+                                android:text="TV"
+                                android:textSize="12sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -120,6 +120,22 @@
                             android:layout_weight="1.2"
                             android:orientation="horizontal">
 
+                            <Button
+                                android:id="@+id/salir"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:text="Salir"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                tools:layout_constraintBottom_creator="1"
+                                tools:layout_constraintTop_creator="1"
+                                tools:layout_editor_absoluteX="16dp"
+                                tools:layout_editor_absoluteY="364dp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -140,28 +156,6 @@
                     android:layout_weight="6"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button16"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="PC"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="179dp"
-                        tools:layout_editor_absoluteY="348dp" />
-
-                    <Button
-                        android:id="@+id/volver3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="VOLVER"
-                        android:textColor="#ff0000"
-                        android:textSize="8sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="175dp"
-                        tools:layout_editor_absoluteY="383dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -266,7 +260,7 @@
                             android:layout_weight="1" />
 
                         <Button
-                            android:id="@+id/button14"
+                            android:id="@+id/luz2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -335,7 +329,7 @@
                             android:orientation="vertical"></LinearLayout>
 
                         <Button
-                            android:id="@+id/button21"
+                            android:id="@+id/luz3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -355,7 +349,7 @@
                             android:layout_weight="1" />
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/luz4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"

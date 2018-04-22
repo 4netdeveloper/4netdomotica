@@ -6,13 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-
 import java.io.IOException;
 
 
 public class Main3Activity extends AppCompatActivity {
 
-    Button volver;
+
     public Button btn1;
     public Button btn2;
     public Button btn3;
@@ -28,12 +27,11 @@ public class Main3Activity extends AppCompatActivity {
     public Button on;
     public Button vmas;
     public Button vmenos;
-    public Button vmax;
     public Button mute;
-    public Button pc;
     public Button btnpr;
     public Button btnlu;
     public Button btnmn;
+    public Button salida;
 
 
 
@@ -43,8 +41,8 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        volver = (Button) findViewById(R.id.volver3);
-        volver.setOnClickListener(new View.OnClickListener() {
+        btnmn = (Button) findViewById(R.id.menu);
+        btnmn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main3Activity.this, Main2Activity.class);
@@ -53,7 +51,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        btn1  = (Button) findViewById(R.id.button);
+        btn1  = (Button) findViewById(R.id.button1);
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -93,7 +91,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        btn3  = (Button) findViewById(R.id.button4);
+        btn3  = (Button) findViewById(R.id.button3);
         // configura(btn2, "tv?c=2");
 
         //configura((Button) findViewById(R.id.button3) , "tv?c=3");
@@ -112,7 +110,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        btn4  = (Button) findViewById(R.id.button5);
+        btn4  = (Button) findViewById(R.id.button4);
 
         btn4.setOnClickListener(new View.OnClickListener() {
 
@@ -127,7 +125,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        btn5  = (Button) findViewById(R.id.button6);
+        btn5  = (Button) findViewById(R.id.button5);
 
         btn5.setOnClickListener(new View.OnClickListener() {
 
@@ -144,7 +142,7 @@ public class Main3Activity extends AppCompatActivity {
         });
 
 
-        btn6  = (Button) findViewById(R.id.button7);
+        btn6  = (Button) findViewById(R.id.button6);
 
         btn6.setOnClickListener(new View.OnClickListener() {
 
@@ -161,7 +159,7 @@ public class Main3Activity extends AppCompatActivity {
         });
 
 
-        btn7  = (Button) findViewById(R.id.button8);
+        btn7  = (Button) findViewById(R.id.button7);
 
         btn7.setOnClickListener(new View.OnClickListener() {
 
@@ -177,7 +175,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        btn8  = (Button) findViewById(R.id.button9);
+        btn8  = (Button) findViewById(R.id.button8);
 
         btn8.setOnClickListener(new View.OnClickListener() {
 
@@ -192,23 +190,7 @@ public class Main3Activity extends AppCompatActivity {
                 }
             }
         });
-        btn8  = (Button) findViewById(R.id.button9);
-
-        btn8.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    linkeador.ira("tv?c=8");
-                } catch (IOException e) {
-                    Intent intent = new Intent( Main3Activity.this , atencion.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        btn9  = (Button) findViewById(R.id.button10);
+        btn9  = (Button) findViewById(R.id.button9);
 
         btn9.setOnClickListener(new View.OnClickListener() {
 
@@ -224,7 +206,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        btn0  = (Button) findViewById(R.id.button11);
+        btn0  = (Button) findViewById(R.id.button0);
 
         btn0.setOnClickListener(new View.OnClickListener() {
 
@@ -240,7 +222,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        on = (Button) findViewById(R.id.button12);
+        on = (Button) findViewById(R.id.onoff);
 
         on.setOnClickListener(new View.OnClickListener() {
 
@@ -256,7 +238,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        chu = (Button) findViewById(R.id.button17);
+        chu = (Button) findViewById(R.id.canalup);
 
         chu.setOnClickListener(new View.OnClickListener() {
 
@@ -272,7 +254,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        chd = (Button) findViewById(R.id.button20);
+        chd = (Button) findViewById(R.id.canaldw);
 
         chd.setOnClickListener(new View.OnClickListener() {
 
@@ -288,7 +270,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        vmas = (Button) findViewById(R.id.button19);
+        vmas = (Button) findViewById(R.id.volumeup);
 
         vmas.setOnClickListener(new View.OnClickListener() {
 
@@ -296,7 +278,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    linkeador.ira("tv?c=volummenup");
+                    linkeador.ira("tv?c=volummeup");
                 } catch (IOException e) {
                     Intent intent = new Intent( Main3Activity.this , atencion.class);
                     startActivity(intent);
@@ -304,7 +286,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        vmenos = (Button) findViewById(R.id.button3);
+        vmenos = (Button) findViewById(R.id.volumedw);
 
         vmenos.setOnClickListener(new View.OnClickListener() {
 
@@ -312,7 +294,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-                    linkeador.ira("tv?c=volummendown");
+                    linkeador.ira("tv?c=volummedown");
                 } catch (IOException e) {
                     Intent intent = new Intent( Main3Activity.this , atencion.class);
                     startActivity(intent);
@@ -322,7 +304,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
 
-        mute = (Button) findViewById(R.id.button13);
+        mute = (Button) findViewById(R.id.mute);
 
         mute.setOnClickListener(new View.OnClickListener() {
 
@@ -338,16 +320,6 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        pc = (Button) findViewById(R.id.button16);
-
-        pc.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
 
         btnpr = (Button) findViewById(R.id.proyector);
 
@@ -371,16 +343,19 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        btnmn= (Button) findViewById(R.id.menu);
-
-        btnmn.setOnClickListener(new View.OnClickListener(){
-
+        salida = (Button)findViewById(R.id.salir);
+        salida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main3Activity.this, Main2Activity.class);
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+
             }
         });
+
 
     }
 

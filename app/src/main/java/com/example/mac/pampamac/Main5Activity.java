@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class Main5Activity extends AppCompatActivity {
 
-    Button volver;
+    Button menu;
     public Button btnup;
     public Button btndw;
     public Button btnlf;
@@ -26,15 +26,9 @@ public class Main5Activity extends AppCompatActivity {
     public Button btninp;
     public Button btntv;
     public Button btnlu;
-    //public Button btn0;
-    //public Button chu;
-    //public Button chd;
+    public Button btnmenu;
     public Button btnon;
-    //public Button vmas;
-    //public Button vmenos;
-    //public Button vmax;
-    //public Button mute;
-    public Button pc;
+    public Button salida;
 
 
 
@@ -43,8 +37,8 @@ public class Main5Activity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
-        volver = (Button) findViewById(R.id.volver3);
-        volver.setOnClickListener(new View.OnClickListener() {
+        menu = (Button) findViewById(R.id.menu);
+        menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main5Activity.this, Main2Activity.class);
@@ -53,7 +47,7 @@ public class Main5Activity extends AppCompatActivity {
             }
         });
 
-        btnup  = (Button) findViewById(R.id.button); //flecha arriba
+        btnup  = (Button) findViewById(R.id.button1); //flecha arriba
 
         btnup.setOnClickListener(new View.OnClickListener() {
 
@@ -145,7 +139,7 @@ public class Main5Activity extends AppCompatActivity {
         });
 
 
-        btnon  = (Button) findViewById(R.id.button7); // boton encendido
+        btnon  = (Button) findViewById(R.id.prender); // boton encendido
 
         btnon.setOnClickListener(new View.OnClickListener() {
 
@@ -162,7 +156,7 @@ public class Main5Activity extends AppCompatActivity {
         });
 
 
-        btnme  = (Button) findViewById(R.id.button8); // boton menu
+        btnme  = (Button) findViewById(R.id.menupr); // boton menu
 
         btnme.setOnClickListener(new View.OnClickListener() {
 
@@ -178,7 +172,7 @@ public class Main5Activity extends AppCompatActivity {
             }
         });
 
-        btninp  = (Button) findViewById(R.id.button9); // boton input
+        btninp  = (Button) findViewById(R.id.input); // boton input
 
         btninp.setOnClickListener(new View.OnClickListener() {
 
@@ -194,18 +188,7 @@ public class Main5Activity extends AppCompatActivity {
             }
         });
 
-        pc = (Button) findViewById(R.id.button16);
-
-        pc.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
-
-        btntv= (Button) findViewById(R.id.button8);
+        btntv= (Button) findViewById(R.id.televisor);
         btntv.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -215,7 +198,7 @@ public class Main5Activity extends AppCompatActivity {
             }
         });
 
-        btnlu= (Button) findViewById(R.id.button23);
+        btnlu= (Button) findViewById(R.id.luces);
         btnlu.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -225,9 +208,30 @@ public class Main5Activity extends AppCompatActivity {
             }
         });
 
+        btnmenu= (Button) findViewById(R.id.menu);
+        btnmenu.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main5Activity.this, Main2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        salida = (Button)findViewById(R.id.salir);
+        salida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+        });
 
     }
     }
 
 
-}

@@ -70,12 +70,11 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1.2"
                                 android:orientation="horizontal"></LinearLayout>
                         </LinearLayout>
 
                         <Button
-                            android:id="@+id/button8"
+                            android:id="@+id/televisor"
                             android:layout_width="match_parent"
                             android:layout_height="209dp"
                             android:layout_weight="1"
@@ -89,7 +88,7 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/button23"
+                                android:id="@+id/luces"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -104,7 +103,7 @@
                             android:orientation="horizontal">
 
                             <Button
-                                android:id="@+id/button9"
+                                android:id="@+id/menu"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -118,6 +117,22 @@
                             android:layout_weight="1.2"
                             android:orientation="horizontal">
 
+                            <Button
+                                android:id="@+id/salir"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:text="Salir"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                tools:layout_constraintBottom_creator="1"
+                                tools:layout_constraintTop_creator="1"
+                                tools:layout_editor_absoluteX="16dp"
+                                tools:layout_editor_absoluteY="364dp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -137,28 +152,6 @@
                     android:layout_weight="6"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button16"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="PC"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="179dp"
-                        tools:layout_editor_absoluteY="348dp" />
-
-                    <Button
-                        android:id="@+id/volver3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="VOLVER"
-                        android:textColor="#ff0000"
-                        android:textSize="8sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="175dp"
-                        tools:layout_editor_absoluteY="383dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -251,7 +244,7 @@
                             android:layout_weight="1" />
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/button1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -476,13 +469,13 @@
                     android:orientation="horizontal"></LinearLayout>
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/prender"
                     android:layout_width="match_parent"
                     android:layout_height="278dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_weight="1.1"
-                    android:background="@drawable/power"
+                    android:background="@drawable/btnpulsado"
                     android:textSize="10sp"
                     android:textStyle="bold"
                     tools:layout_editor_absoluteX="147dp"
@@ -495,7 +488,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button8"
+                        android:id="@+id/menupr"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -510,7 +503,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button9"
+                        android:id="@+id/input"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

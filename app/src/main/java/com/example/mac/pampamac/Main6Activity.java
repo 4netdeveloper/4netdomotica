@@ -16,12 +16,11 @@ import java.io.IOException;
 
 public class Main6Activity extends AppCompatActivity {
 
-    Button volver;
     public Button luz1;
     public Button luz2;
     public Button luz3;
     public Button luz4;
-
+    public Button salida;
     public Button btnpr;
     public Button btnlu;
     public Button btnmn;
@@ -31,18 +30,18 @@ public class Main6Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
-        volver = (Button) findViewById(R.id.volver3);
-        volver.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_main6);
+        btnmn = (Button) findViewById(R.id.menu);
+        btnmn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main6Activity.this, Main2Activity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent (v.getContext(), Main2Activity.class);
+                startActivityForResult(intent2, 0);
 
             }
         });
 
-        luz1  = (Button) findViewById(R.id.luz1); //flecha arriba
+        luz1  = (Button) findViewById(R.id.luz1);
 
         luz1.setOnClickListener(new View.OnClickListener() {
 
@@ -51,6 +50,69 @@ public class Main6Activity extends AppCompatActivity {
 
                 try {
                     if ( linkeador.ira( "gp?c=1" ) ) {
+                        // todo ok.
+                    }else{
+                        // falla no conecto.
+                        Intent intent = new Intent( Main6Activity.this , atencion.class);
+                        startActivity(intent);
+                    };
+                } catch (IOException e) {
+                    // fallo otra cosa.
+                }
+            }
+        });
+
+        luz2  = (Button) findViewById(R.id.luz2);
+
+        luz2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                try {
+                    if ( linkeador.ira( "gp?c=2" ) ) {
+                        // todo ok.
+                    }else{
+                        // falla no conecto.
+                        Intent intent = new Intent( Main6Activity.this , atencion.class);
+                        startActivity(intent);
+                    };
+                } catch (IOException e) {
+                    // fallo otra cosa.
+                }
+            }
+        });
+
+        luz3  = (Button) findViewById(R.id.luz3);
+
+        luz3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                try {
+                    if ( linkeador.ira( "gp?c=3" ) ) {
+                        // todo ok.
+                    }else{
+                        // falla no conecto.
+                        Intent intent = new Intent( Main6Activity.this , atencion.class);
+                        startActivity(intent);
+                    };
+                } catch (IOException e) {
+                    // fallo otra cosa.
+                }
+            }
+        });
+
+        luz4  = (Button) findViewById(R.id.luz4);
+
+        luz4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                try {
+                    if ( linkeador.ira( "gp?c=4" ) ) {
                         // todo ok.
                     }else{
                         // falla no conecto.
@@ -83,14 +145,16 @@ public class Main6Activity extends AppCompatActivity {
             }
         });
 
-        btnmn= (Button) findViewById(R.id.menu);
-
-        btnmn.setOnClickListener(new View.OnClickListener(){
-
+        salida = (Button)findViewById(R.id.salir);
+        salida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main6Activity.this, Main2Activity.class);
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+
             }
         });
 

@@ -16,7 +16,7 @@ import java.net.URL;
 
 
 public class linkeador extends Activity { //clase para conectar apk con la raspy
-    private static String org = "http://10.0.4.6:8080/"; //ip y puerto de conexion
+    private static String org = "http://192.168.42.1:8080/"; //ip y puerto de conexion
 
     public static String url(String ac) {
 
